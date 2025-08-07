@@ -22,6 +22,7 @@ a {
   background-image: url(top.jpg);
    background-size: cover;
   text-align: center;
+  height: 100%;
 }
 
 
