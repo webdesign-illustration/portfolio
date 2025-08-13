@@ -356,7 +356,7 @@ display: block;
 	    text-align: center; 
 }	
 input, textarea{
-  width: 200px;
+  width: 300px;
   margin: 10px 0 30px 0;
   padding: 20px;
   font-size: 18px;
@@ -434,4 +434,11 @@ display: block;
 	.message-wrapper .btn {
     width: 100%;
   }
+	input, textarea{
+  width: 300px;
+  margin: 10px 0 30px 0;
+  padding: 20px;
+  font-size: 18px;
+  border: 1px solid #696969;
+}
 }
