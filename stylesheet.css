@@ -138,7 +138,7 @@ header {
   display: inline-block;
   margin-top: 15px;
   font-size: 13px;
-  color: #b3aeb5;
+  color: #696969;
 	padding-left: 10%;
 	padding-right: 10%;
 	display: none;
@@ -344,7 +344,7 @@ display: block;
   display: inline-block;
   margin-top: 15px;
   font-size: 13px;
-  color: #b3aeb5;
+  color: #696969;
 	padding-left: 10%;
 	padding-right: 10%;
 }
@@ -358,12 +358,13 @@ display: block;
 	padding-bottom: 80px;
 }
 .sp-about-icon{
-	padding-left: 20%;
-	padding-right: 20%;
+	padding-left: 25%;
+	padding-right: 25%;
 	}
 .sp-about-text{
-	padding-left: 20%;
+	padding-left: 25%;
 	padding-right: 20%;
+	padding-top: 20px;
 	color: #696969;
 	}
 .sp-about-title{
@@ -437,7 +438,8 @@ display: block;
 	padding-right: 20%;
 	}
 .sp-about-text{
-	padding-left: 20%;
+	margin: 0 auto;
+	padding-left: 22%;
 	padding-right: 20%;
 	color: #696969;
 	}
