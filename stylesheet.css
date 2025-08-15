@@ -11,6 +11,70 @@ a {
   text-decoration: none;
 }
 
+
+.sliderArea {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 25px;
+}
+.sliderArea.w300 {
+  max-width: 300px;
+}
+.slick-slide {
+  margin: 0 5px;
+}
+.slick-slide img {
+  width: 100%;
+  height: auto;
+}
+.slick-prev, .slick-next {
+  z-index: 1;
+}
+.slick-prev:before, .slick-next:before {
+  color: #000;
+}
+.slick-slide {
+  transition: all ease-in-out .3s;
+  opacity: .2;
+}
+.slick-active {
+  opacity: 1;
+}
+.slick-current {
+  opacity: 1;
+}
+.thumb {
+  margin: 20px 0 0;
+}
+.thumb .slick-slide {
+  cursor: pointer;
+}
+.thumb .slick-slide:hover {
+  opacity: .7;
+}
+.section{
+	margin-top: 20px;
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+/*====================================================================
+.full-screen
+====================================================================*/
+
+.full-screen .slick-list {
+  overflow: visible;
+}
+.full-screen.slider {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+/*====================================================================
+以下は不要です。
+====================================================================*/
+
+
+
 .container {
   width: 100%;
   padding: 0 15px;
@@ -31,8 +95,8 @@ a {
 	text-align: center;
 	color: #696969;
 	padding: 100px 100px;
-
 }
+
 
 .btn-wrapper {
   text-align: center;
@@ -104,6 +168,37 @@ header {
   padding-right: 5%;
   text-align: center;
 }
+
+.box {
+  width: 100%;        /* 横幅いっぱい */
+  height: 600px;      /* 高さを300pxに指定 */
+  background: #aaa;   /* 背景色を灰色にする */
+  margin: 0 0 50px;   /* 下方向に適度な余白 */
+  opacity: 0;         /* 初期値は透明にしておく */
+  transition: .5s;    /* 動くスピードを0.5秒に指定 */
+  position: relative; /* 相対位置の設定 */
+  top: 50px;          /* 事前に下に50pxずらしておく */
+}
+
+.active {
+  opacity: 1;         /* 透明度を元に戻す */
+  top: 0;             /* ずらしていた位置を戻すことで上に上がっているようにみえる */
+}
+
+.box2 {
+  width: 100%;        /* 横幅いっぱい */
+  margin: 0 0 50px;   /* 下方向に適度な余白 */
+  opacity: 0;         /* 初期値は透明にしておく */
+  transition: .5s;    /* 動くスピードを0.5秒に指定 */
+  position: relative; /* 相対位置の設定 */
+  top: 50px;          /* 事前に下に50pxずらしておく */
+}
+
+.active {
+  opacity: 1;         /* 透明度を元に戻す */
+  top: 0;             /* ずらしていた位置を戻すことで上に上がっているようにみえる */
+}
+
 
 .heading {
   padding-top: 80px;
