@@ -51,3 +51,8 @@ $(function() {
 	},2500); //2.5秒後にロゴ含め真っ白背景をフェードアウト！
 });
 
+$(document).ready(function () {
+    // ページ読み込み時にトップへスムーズスクロール
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+});
+
