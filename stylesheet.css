@@ -506,8 +506,15 @@ display: block;
 }
 
 .thanks{
-	margin-top: 80px;
-	padding: 20% 10%;
+	margin: 0 auto;
+	padding: 15% 0% 10% 0%;
+	text-align: center;
+}
+
+.thanks p{
+	display: block;
+	width: 100%;
+	padding: 20px 100px;
 }
 @media all and (max-width: 750px) {
   .top-wrapper h1 {
