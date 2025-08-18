@@ -152,7 +152,7 @@ header {
 .header-right {
   float: right;
 	position: fixed;
-		right:5%;
+		right:2%;
 }
 
 .header-right a {
