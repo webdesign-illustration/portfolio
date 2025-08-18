@@ -190,7 +190,10 @@ header {
 	top:50px;
 }
 
-
+.box-img{
+	margin: 0 auto;
+	text-align: center;
+}
 
 .active {
   opacity: 1;         /* 透明度を元に戻す */
