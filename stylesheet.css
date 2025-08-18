@@ -456,7 +456,7 @@ footer {
 }
 @media all and (max-width: 1000px) {
 	.logo{
-		width: 80%;
+		width: 70%;
 		display: block;
 		margin-top: 15px;
 	}
