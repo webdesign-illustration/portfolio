@@ -668,6 +668,17 @@ input, textarea{
   font-size: 18px;
   border: 1px solid #696969;
 }
+.thanks{
+	margin: 0 auto;
+	padding: 15% 5% 10% 5%;
+	text-align: center;
+}
+
+.thanks p{
+	display: block;
+	width: 100%;
+	padding: 20px 10px;
+}
 @media all and (max-width: 670px) {
 	.logo{
 		width: 80%;
