@@ -56,3 +56,21 @@ $(document).ready(function () {
     $("html, body").animate({ scrollTop: 0 }, "slow");
 });
 
+$(function(){
+    const pageTop = $('.pagetop');
+	pageTop.hide();
+	pageTop.click(function(){
+		$('body,html').animate({
+            scrollTop: 0
+        }, 500);
+		return false;
+	});
+});
+
+$(window).on('load scroll', function(){
+	if ($(this).scrollTop() > 100) {
+		$('.pagetop').fadeIn();
+	} else {
+		$('.pagetop').fadeOut();
+	}
+});

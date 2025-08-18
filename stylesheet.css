@@ -378,6 +378,43 @@ footer {
 	width: 280px;
 }
 
+.pagetop {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: #696969;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 10;
+}
+.pagetop span {
+    font-size: 1.0rem;
+    color: #FFF;
+    transition: all 0.3s;
+}
+.pagetop span::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    display: block;
+    margin: 0 auto 2px auto;
+    border-top: 2px solid #FFF;
+    border-right: 2px solid #FFF;
+    box-sizing: border-box;
+    transform: rotate(-45deg);
+}
+.pagetop:hover span {
+    transform: translateY(-2px);
+}
 @media all and (max-width: 1000px) {
 	.logo{
 		width: 80%;
