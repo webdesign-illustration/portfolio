@@ -152,6 +152,8 @@ header {
 .header-right {
   float: right;
   margin-right: -25px;
+			position: fixed;
+		left:94%;
 }
 
 .header-right a {
