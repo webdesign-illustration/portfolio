@@ -505,6 +505,10 @@ display: block;
   }
 }
 
+.thanks{
+	margin-top: 80px;
+	padding: 20% 10%;
+}
 @media all and (max-width: 750px) {
   .top-wrapper h1 {
     font-size: 32px;
