@@ -652,7 +652,9 @@ display: block;
 .about {
 	display: none;
 }
-
+	.about2{
+		padding-top: 20px;
+	}
 
 .sp-about-icon{
 	padding-left: 20%;
