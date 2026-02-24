@@ -256,14 +256,9 @@ header {
 	display: none;
 }
 
-.video{
-	display: flex;
-	justify-content: center;
-}
-
 .video iframe {
-	max-width: 660px;
-	aspect-ratio: 16 / 9;
+	display: block;
+	margin: 0 auto;
 }
 
 .video-sp{
