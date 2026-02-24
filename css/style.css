@@ -600,6 +600,19 @@ display: block;
 	padding-bottom: 20px;
 }	
 
+.video iframe {
+	display: block;
+	width: 660px;
+	margin: 0 auto;
+}
+
+.video-sp{
+	display: none;
+}
+
+.video-sp iframe {
+	display: none;
+}	
   footer {
     text-align: center;
   }
@@ -705,9 +718,13 @@ input, textarea{
 	display: none;
 }
 
+.video iframe{
+	display: none;
+}
+	
 .video-sp iframe {
 	display: block;
-	width: 560px;
+	width: 100%;
 	margin: 0 auto;
 }
 	
