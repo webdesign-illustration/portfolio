@@ -262,7 +262,6 @@ header {
 }
 
 .video iframe {
-	width: 100%;
 	max-width: 660px;
 	aspect-ratio: 16 / 9;
 }
