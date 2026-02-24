@@ -261,6 +261,12 @@ header {
 	justify-content: center;
 }
 
+.video iframe {
+	width: 100%;
+	max-width: 660px;
+	aspect-ratio: 16 / 9;
+}
+
 .heading h3 {
   font-weight: normal;
 }
