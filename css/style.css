@@ -773,6 +773,20 @@ display: block;
   .lesson-wrapper {
     height: 100%;
   }
+
+.video{
+	display: none;
+}
+
+.video-sp{
+	display: block;
+	justify-content: center;
+}
+
+.video-sp iframe {
+	width: 100%;
+	aspect-ratio: 16 / 9;
+}	
 .about {
   	display: none;
 }
