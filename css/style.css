@@ -257,8 +257,9 @@ header {
 }
 
 .video{
-	width: 100%;
+	width: 1000px;
 	text-align: center;
+	margin: 50px;
 }
 
 .heading h3 {
