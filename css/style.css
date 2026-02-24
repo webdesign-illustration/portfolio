@@ -257,7 +257,7 @@ header {
 }
 
 .video{
-	display: flex;
+	display: block;
 	justify-content: center;
 }
 
@@ -711,7 +711,7 @@ input, textarea{
 }
 
 .video-sp{
-	display: flex;
+	display: block;
 	justify-content: center;
 }
 
