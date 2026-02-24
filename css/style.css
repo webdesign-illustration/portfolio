@@ -697,6 +697,17 @@ input, textarea{
 	width: 100%;
 	padding: 20px 10px;
 }
+
+.video{
+	display: flex;
+	justify-content: center;
+}
+
+.video iframe {
+	width: 100%;
+	aspect-ratio: 16 / 9;
+}
+
 @media all and (max-width: 670px) {
 	.logo{
 		width: 80%;
