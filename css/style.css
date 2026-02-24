@@ -714,13 +714,6 @@ input, textarea{
 	padding: 20px 10px;
 }
 
-.video{
-	display: none;
-}
-
-.video iframe{
-	display: none;
-}
 	
 .video-sp iframe {
 	display: block;
