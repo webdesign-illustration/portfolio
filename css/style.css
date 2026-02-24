@@ -256,6 +256,11 @@ header {
 	display: none;
 }
 
+.video{
+	width: 100%;
+	text-align: center;
+}
+
 .heading h3 {
   font-weight: normal;
 }
