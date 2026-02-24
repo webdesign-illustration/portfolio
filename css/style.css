@@ -699,15 +699,19 @@ input, textarea{
 }
 
 .video{
+	display: none;
+}
+
+.video-sp{
 	display: flex;
 	justify-content: center;
 }
 
-.video iframe {
+.video-sp iframe {
 	width: 100%;
 	aspect-ratio: 16 / 9;
 }
-
+	
 @media all and (max-width: 670px) {
 	.logo{
 		width: 80%;
