@@ -705,14 +705,10 @@ input, textarea{
 	display: none;
 }
 
-.video-sp{
-	display: block;
-	justify-content: center;
-}
-
 .video-sp iframe {
-	width: 100%;
-	aspect-ratio: 16 / 9;
+	display: block;
+	width: 560px;
+	margin: 0 auto;
 }
 	
 @media all and (max-width: 670px) {
