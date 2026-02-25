@@ -257,8 +257,7 @@ header {
 }
 
 .video {
-  position: relative;
-  width: 100%;
+    width: 100%;
   max-width: 660px;
   margin: 40px auto;
   aspect-ratio: 16 / 9;
