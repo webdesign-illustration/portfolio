@@ -1,0 +1,49 @@
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background: #fafafa;
+}
+
+.header {
+  padding: 20px;
+}
+
+.back {
+  text-decoration: none;
+  color: #555;
+  font-size: 14px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.work-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.work-main-image img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.section {
+  margin-top: 40px;
+}
+
+.section h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.before-after img,
+.sub-images img {
+  width: 48%;
+  margin: 1%;
+  border-radius: 6px;
+}
