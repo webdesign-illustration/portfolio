@@ -101,15 +101,20 @@
     </section>
 
   </main>
-<div id="footer"></div>
+<footer>
+  <div class="container">
+    <h3>KSDesign</h3>
+    <p>© 2025 KSDesign All Rights Reserved</p>
+  </div>
+</footer>
   <script>
-  fetch("../header.html")
-    .then(res => res.text())
-    .then(data => document.getElementById("header").innerHTML = data);
+  fetch("header.html")
+  .then(res => res.text())
+  .then(data => document.getElementById("header").innerHTML = data);
 
-  fetch("../footer.html")
-    .then(res => res.text())
-    .then(data => document.getElementById("footer").innerHTML = data);
+fetch("footer.html")
+  .then(res => res.text())
+  .then(data => document.getElementById("footer").innerHTML = data);
 </script>
 </body>
 </html>
