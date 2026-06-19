@@ -1,0 +1,779 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Hiragino Kaku Gothic ProN";
+}
+
+a {
+  text-decoration: none;
+}
+.slider .slide{
+    width: 360px;
+}
+.slider .slide img{
+    max-width: 100%;
+    height: auto;
+}
+
+.sliderArea {
+  margin: 0 auto;
+  padding: 0 25px;
+max-width: 100%;
+}
+.sliderArea.w300 {
+  max-width: 300px;
+}
+.slick-slide {
+  margin: 0 5px;
+}
+.slick-slide img {
+  width: 100%;
+  height: auto;
+}
+.slick-prev, .slick-next {
+  z-index: 1;
+}
+.slick-prev:before, .slick-next:before {
+  color: #000;
+}
+.slick-slide {
+  transition: all ease-in-out .3s;
+  opacity: .2;
+}
+.slick-active {
+  opacity: 1;
+}
+.slick-current {
+  opacity: 1;
+}
+.thumb {
+  margin: 20px 0 0;
+}
+.thumb .slick-slide {
+  cursor: pointer;
+}
+.thumb .slick-slide:hover {
+  opacity: .7;
+}
+.section{
+	margin-top: 20px;
+	padding-top: 60px;
+	padding-bottom: 60px;
+	overflow-x: hidden;
+}
+
+
+/*====================================================================
+.full-screen
+====================================================================*/
+
+.full-screen .slick-list {
+  overflow: visible;
+}
+.full-screen.slider {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+/*====================================================================
+以下は不要です。
+====================================================================*/
+
+
+
+.container {
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.container h2{
+	color: #696969;
+}
+.top-wrapper {
+  text-align: center;
+	padding-top: 40px;
+}
+
+.top-wrapper-icon{
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	color: #696969;
+	padding: 50px 0;
+}
+
+
+.btn-wrapper {
+  text-align: center;
+}
+
+.btn-wrapper p {
+  margin-bottom: 20px;
+}
+
+
+
+.btn {
+  padding: 8px 24px;
+  color: white;
+  display: inline-block;
+  opacity: 0.8;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+
+header {
+  height: 65px;
+  width: 100%;
+  background-color: rgba(255,255,0,0.92);
+  position :fixed;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  margin-top: 10px;
+	width: 70%;
+}
+
+.header-left {
+  float: left;
+}
+
+.header-right {
+  float: right;
+	position: fixed;
+		right:2%;
+}
+
+.header-right a {
+  line-height: 65px;
+  padding: 0 25px;
+  color: #696969;
+  display: block;
+  float: left;
+  transition: all 0.5s;
+}
+
+.header-right a:hover {
+  background-color: rgba(255,255,255,0.9);
+}
+.sp-menu{
+	display: none;
+	
+}
+
+.lesson-wrapper {
+  height: 100%;
+  padding-bottom: 80px;
+  padding-left: 5%;
+  padding-right: 5%;
+  text-align: center;
+}
+
+.box {
+	width: 100%;        /* 横幅いっぱい */
+  margin: 100px  0 ;   /* 下方向に適度な余白 */
+  opacity: 0;         /* 初期値は透明にしておく */
+  transition: .5s;    /* 動くスピードを0.5秒に指定 */
+  position: relative; /* 相対位置の設定 */
+  bottom: 50px;          /* 事前に下に50pxずらしておく */
+	top:50px;
+}
+
+.box-img{
+	margin: 0 auto;
+	text-align: center;
+	width: 100%;
+	position: relative;
+}
+
+.active {
+  opacity: 1;         /* 透明度を元に戻す */
+  top: 0;             /* ずらしていた位置を戻すことで上に上がっているようにみえる */
+}
+
+.box2 {
+  width: 100%;        /* 横幅いっぱい */
+  margin: 0 0 50px;   /* 下方向に適度な余白 */
+  opacity: 0;         /* 初期値は透明にしておく */
+  transition: .5s;    /* 動くスピードを0.5秒に指定 */
+  position: relative; /* 相対位置の設定 */
+  top: 50px;          /* 事前に下に50pxずらしておく */
+}
+
+.active {
+  opacity: 1;         /* 透明度を元に戻す */
+  top: 0;             /* ずらしていた位置を戻すことで上に上がっているようにみえる */
+}
+
+
+.heading {
+  padding-top: 80px;
+  padding-bottom: 50px;
+  color: #5f5d60;
+}
+
+.heading h2 {
+  font-weight: normal;
+}
+.lessons{
+	padding: 30px 0 30px 0;
+}
+
+.lesson {
+  float: left;
+  width: 25%;
+}
+
+.lesson-icon{
+	margin-bottom: 30px;
+}
+.lesson-icon img{
+	width: 100%;
+}
+
+.lesson-wrapper-sp{
+	display: none;
+}
+.text-contents {
+  width: 100%;
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 13px;
+  color: #696969;
+	padding-left: 10%;
+	padding-right: 10%;
+	display: none;
+}
+
+.video {
+    width: 100%;
+  max-width: 660px;
+  margin: 40px auto;
+  aspect-ratio: 16 / 9;
+}
+
+.video iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.heading h3 {
+  font-weight: normal;
+}
+
+.about {
+  text-align: center;
+	height: 700px;
+	padding-top: 50px;
+	padding-left: 5%;
+	padding-right: 5%;
+	margin-bottom: 50px;
+}
+
+.about-contents{
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.about-contents h1{
+	color: #696969;
+
+}
+.about-text{
+	display: block;
+	padding-bottom: 20px;
+	padding-top: 20px;
+	padding-left: 10px;
+	text-align: center;
+}
+.about-left{
+	float: left;
+	width: 35%;
+	text-align: left;
+	margin-left: 10%;
+	margin-right: 5%;
+	color: #696969;
+}
+
+.about-right{
+	float: right;
+	width: 40%;
+	margin-right: 10%;
+	padding-top: 20px;
+}
+
+.sp-about{
+		display: none;
+}
+
+
+.contact{
+	height: 100%;
+	padding-top: 80px;
+	padding-bottom: 80px;
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	color: #696969;
+background-color: rgb(220,220,220);
+}
+
+
+
+
+/* inputとtextareaのCSSを指定してください */
+input, textarea{
+  width: 400px;
+  margin: 10px 0 30px 0;
+  padding: 20px;
+  font-size: 18px;
+  border: 1px solid #696969;
+}
+
+/* contact-submitのCSSを指定してください */
+.contact-submit{
+  background-color: #696969;
+  color: white;
+}
+
+.contact-submit:hover{
+	background-color: #939292;
+}
+footer img {
+  width: 125px;
+}
+
+footer p {
+  color: #b3aeb5;
+  font-size: 12px;
+}
+
+footer h3{
+	color: #696969;
+}
+
+footer {
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.menu-icon {
+  display: none;
+}
+
+.clear {
+  clear: left;
+}
+.text-active {
+  display: block;
+}
+
+.start {
+	background: #FFF;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 9000;
+}
+.start p {
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	display: none;
+	z-index: 9999;
+	width: 280px;
+}
+
+.pagetop {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: #696969;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 10;
+}
+.pagetop span {
+    font-size: 1.0rem;
+    color: #FFF;
+    transition: all 0.3s;
+}
+.pagetop span::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    display: block;
+    margin: 0 auto 2px auto;
+    border-top: 2px solid #FFF;
+    border-right: 2px solid #FFF;
+    box-sizing: border-box;
+    transform: rotate(-45deg);
+}
+.pagetop:hover span {
+    transform: translateY(-2px);
+}
+
+.pagetop2{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: #696969;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 10;
+}
+.pagetop2 span {
+    font-size: 1.0rem;
+    color: #FFF;
+    transition: all 0.3s;
+}
+.pagetop2 span::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    display: block;
+    margin: 0 auto 2px auto;
+    border-top: 2px solid #FFF;
+    border-right: 2px solid #FFF;
+    box-sizing: border-box;
+    transform: rotate(-45deg);
+}
+.pagetop2:hover span {
+    transform: translateY(-2px);
+}
+@media all and (max-width: 1000px) {
+	.logo{
+		width: 70%;
+		display: block;
+		margin-top: 15px;
+	}
+.header-right {
+  display: none;
+}
+.menu-icon{
+  color: #696969;
+  float: right;
+  font-size: 25px;
+  padding: 21px 0;
+display: block;
+			position: fixed;
+		left:94%;
+}
+
+	.sp-menu{
+		display: none;
+		background-color: rgb(220,220,220);
+		position: fixed;
+		top: 65px;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		z-index: 100;
+		height: 229px;
+
+	}
+	
+	.fa-times {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  color: rgba(128, 128, 128, 0.46);
+  cursor: pointer;
+}
+	.sp-menu p{
+		display: block;
+		font-size:30px;
+		text-align: center;
+		color: #696969;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		width: 100%;
+		margin: 0 auto;
+		font-weight: bold;
+
+	}
+	
+	.sp-menu a{
+		display: block;
+		font-size:24px;
+		text-align: center;
+		color: #696969;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		width: 100%;
+		margin: 0 auto;
+	}
+	.sp-menu a:hover{
+		background-color: white;
+		width: 100%;
+		display: block;
+	}
+
+	.lesson {
+    width: 50%;
+    margin-bottom: 50px;
+	  display: block;
+  }
+
+  .lesson-wrapper {
+    height: 100%;
+	display: none;
+  }
+	
+ .lesson-wrapper-sp {
+	display: block;
+  }
+
+	.lesson-icon{
+		padding-left: 10%;
+		padding-right: 10%;
+	}
+.text-contents2 {
+  width: 100%;
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 13px;
+  color: #696969;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+	
+.about {
+ display: none;
+}
+.sp-about{
+	display: block;
+	margin: 0 auto;
+	padding-bottom: 80px;
+	padding-top: 40px;
+}
+.sp-about-icon{
+	padding-left: 25%;
+	padding-right: 25%;
+	}
+.sp-about-text{
+	padding-left: 25%;
+	padding-right: 20%;
+	padding-top: 20px;
+	color: #696969;
+	}
+.sp-about-title{
+		color: #696969;
+	    text-align: center;
+	display: block;
+	padding-top:20px;
+	padding-bottom: 20px;
+}	
+
+
+  footer {
+    text-align: center;
+  }
+}
+
+.thanks{
+	margin: 0 auto;
+	padding: 15% 0% 10% 0%;
+	text-align: center;
+}
+
+.thanks p{
+	display: block;
+	width: 100%;
+	padding: 20px 100px;
+}
+
+@media all and (max-width: 750px) {
+  .top-wrapper h1 {
+    font-size: 32px;
+  }
+	
+	.header-right{
+		display: none;
+	}
+	.menu-icon{
+  color: #696969;
+  float: right;
+  font-size: 25px;
+		position: fixed;
+		left:94%;
+display: block;
+}
+.sp-menu{
+		display: none;
+		background-color: rgb(220,220,220);
+		position: fixed;
+		top: 65px;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		z-index: 100;
+		height: 230px;
+
+	}
+	
+	.logo{
+		width: 80%;
+		display: block;
+		margin-top: 20px;
+	}
+  .heading h2 {
+    font-size: 20px;
+  }
+.top-wrapper-icon{
+	width: 100%;
+	margin: 0 auto;
+	display: block;
+	text-align: center;
+	font-size: 20px;
+	color: #696969;
+}
+
+.about {
+	display: none;
+}
+	
+.sp-about-icon{
+	padding-left: 20%;
+	padding-right: 20%;
+	}
+.sp-about-text{
+	margin: 0 auto;
+	padding-left: 22%;
+	padding-right: 20%;
+	color: #696969;
+	}
+.sp-about-title{
+		color: #696969;
+	    text-align: center; 
+}	
+input, textarea{
+  width: 300px;
+  margin: 10px 0 30px 0;
+  padding: 20px;
+  font-size: 18px;
+  border: 1px solid #696969;
+}
+.thanks{
+	margin: 0 auto;
+	padding: 15% 5% 10% 5%;
+	text-align: center;
+}
+
+.thanks p{
+	display: block;
+	width: 100%;
+	padding: 20px 10px;
+}
+
+
+@media all and (max-width: 670px) {
+	.logo{
+		width: 80%;
+		display: block;
+		margin-top: 20px;
+	}
+	.header-right {
+    display: none;
+  }
+
+	.menu-icon{
+  color: #696969;
+  float: right;
+  font-size: 25px;
+		position: fixed;
+		left:92%;
+display: block;
+}
+
+  .top-wrapper .btn {
+    width: 100%;
+  }
+.top-wrapper-icon{
+	width: 100%;
+	margin: 0 auto;
+	display: block;
+	text-align: center;
+	font-size: 20px;
+	color: #696969;
+
+}
+  .twitter {
+    margin-top: 10px;
+  }
+
+  .top-wrapper {
+    text-align: left;
+  }
+
+ 
+  .top-wrapper p {
+    font-size: 14px;
+  }
+	.top-wrapper-icon{
+		display: block;
+			}
+	.lesson {
+    width: 50%;
+    margin-bottom: 50px;
+ }
+  .lesson-wrapper {
+    height: 100%;
+  }
+
+
+.about {
+  	display: none;
+}
+
+.sp-about-title{
+		color: #696969;
+	    text-align: center; 
+}
+	
+	.message-wrapper .btn {
+    width: 100%;
+  }
+	input, textarea{
+  width: 300px;
+  margin: 10px 0 30px 0;
+  padding: 20px;
+  font-size: 18px;
+  border: 1px solid #696969;
+}
+	}
