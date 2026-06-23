@@ -1,22 +1,8 @@
-body {
-  font-family: "Noto Sans JP", sans-serif;
-  margin: 0;
-  padding: 0;
-  color: #333;
-  background: #fafafa;
-}
-
 
 .back {
   text-decoration: none;
   color: #555;
   font-size: 14px;
-}
-
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 20px;
 }
 
 .work-title {
