@@ -4,6 +4,7 @@
   max-width: 900px;
   margin: 0 auto;
   padding: 20px;
+  padding-top: 100px;
 }
 
 .back {
@@ -36,4 +37,16 @@
   width: 48%;
   margin: 1%;
   border-radius: 6px;
+}
+
+/* PC表示時：ハンバーガーメニューを非表示 */
+.menu-icon {
+  display: none !important;
+}
+
+/* スマートフォン表示時：ハンバーガーメニューを表示 */
+@media all and (max-width: 1000px) {
+  .menu-icon {
+    display: block !important;
+  }
 }
