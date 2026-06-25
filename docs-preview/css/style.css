@@ -1,3 +1,4 @@
+/* (same CSS as before with modifications) */
 * {
   box-sizing: border-box;
 }
@@ -21,7 +22,7 @@ a {
 .sliderArea {
   margin: 0 auto;
   padding: 0 25px;
-max-width: 100%;
+ max-width: 100%;
 }
 .sliderArea.w300 {
   max-width: 300px;
@@ -233,27 +234,47 @@ header {
 .lesson {
   float: left;
   width: 25%;
+  position: relative; /* make the lesson a positioning context so overlays don't change document flow */
 }
 
 .lesson-icon{
 	margin-bottom: 30px;
+	position: relative; /* anchor for absolute text overlay */
 }
 .lesson-icon img{
 	width: 100%;
+	display: block;
 }
 
 .lesson-wrapper-sp{
 	display: none;
 }
 .text-contents {
-  width: 100%;
-  display: inline-block;
-  margin-top: 15px;
+  /* Change from inline block to an absolutely positioned overlay so revealing text doesn't change layout */
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  bottom: 10px;
+  display: block;
+  opacity: 0;
+  margin: 0;
   font-size: 13px;
   color: #696969;
-	padding-left: 10%;
-	padding-right: 10%;
-	display: none;
+  padding: 12px 14px;
+  background: rgba(255,255,255,0.95);
+  transition: opacity .25s ease, transform .25s ease;
+  transform: translateY(8px);
+  pointer-events: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+/* show overlay on hover without affecting surrounding elements */
+.lesson:hover .text-contents,
+.lesson:focus-within .text-contents,
+.lesson .text-active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
 .video {
@@ -329,7 +350,6 @@ header {
 	color: #696969;
 background-color: rgb(220,220,220);
 }
-
 
 
 
@@ -494,20 +514,20 @@ display: block;
 }
 
 	.sp-menu{
-		display: none;
-		background-color: rgb(220,220,220);
-		position: fixed;
-		top: 65px;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		width: 100%;
-		z-index: 100;
-		height: 229px;
+			display: none;
+			background-color: rgb(220,220,220);
+			position: fixed;
+			top: 65px;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			z-index: 100;
+			height: 229px;
 
-	}
-	
-	.fa-times {
+		}
+		
+		.fa-times {
   position: absolute;
   top: 12px;
   right: 12px;
@@ -515,43 +535,43 @@ display: block;
   cursor: pointer;
 }
 	.sp-menu p{
-		display: block;
-		font-size:30px;
-		text-align: center;
-		color: #696969;
-		padding-top: 10px;
-		padding-bottom: 10px;
-		width: 100%;
-		margin: 0 auto;
-		font-weight: bold;
+			display: block;
+			font-size:30px;
+			text-align: center;
+			color: #696969;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			width: 100%;
+			margin: 0 auto;
+			font-weight: bold;
 
-	}
-	
-	.sp-menu a{
-		display: block;
-		font-size:24px;
-		text-align: center;
-		color: #696969;
-		padding-top: 10px;
-		padding-bottom: 10px;
-		width: 100%;
-		margin: 0 auto;
-	}
-	.sp-menu a:hover{
-		background-color: white;
-		width: 100%;
-		display: block;
-	}
+		}
+		
+		.sp-menu a{
+			display: block;
+			font-size:24px;
+			text-align: center;
+			color: #696969;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			width: 100%;
+			margin: 0 auto;
+		}
+		.sp-menu a:hover{
+			background-color: white;
+			width: 100%;
+			display: block;
+		}
 
-	.lesson {
-    width: 50%;
-    margin-bottom: 50px;
-	  display: block;
-  }
+		.lesson {
+	    width: 50%;
+	    margin-bottom: 50px;
+	 	  display: block;
+	  }
 
   .lesson-wrapper {
     height: 100%;
-	display: none;
+		display: none;
   }
 	
  .lesson-wrapper-sp {
@@ -573,31 +593,31 @@ display: block;
 }
 	
 .about {
- display: none;
-}
-.sp-about{
-	display: block;
-	margin: 0 auto;
-	padding-bottom: 80px;
-	padding-top: 40px;
-}
-.sp-about-icon{
-	padding-left: 25%;
-	padding-right: 25%;
-	}
-.sp-about-text{
-	padding-left: 25%;
-	padding-right: 20%;
-	padding-top: 20px;
-	color: #696969;
-	}
-.sp-about-title{
-		color: #696969;
-	    text-align: center;
-	display: block;
-	padding-top:20px;
-	padding-bottom: 20px;
-}	
+ 	display: none;
+ }
+ .sp-about{
+ 	display: block;
+ 	margin: 0 auto;
+ 	padding-bottom: 80px;
+ 	padding-top: 40px;
+ }
+ .sp-about-icon{
+ 	padding-left: 25%;
+ 	padding-right: 25%;
+ 	}
+ .sp-about-text{
+ 	padding-left: 25%;
+ 	padding-right: 20%;
+ 	padding-top: 20px;
+ 	color: #696969;
+ 	}
+ .sp-about-title{
+ 		color: #696969;
+ 	    text-align: center;
+ 	display: block;
+ 	padding-top:20px;
+ 	padding-bottom: 20px;
+ } 	
 
 
   footer {
@@ -631,27 +651,27 @@ display: block;
   font-size: 25px;
 		position: fixed;
 		left:94%;
-display: block;
+ display: block;
 }
 .sp-menu{
-		display: none;
-		background-color: rgb(220,220,220);
-		position: fixed;
-		top: 65px;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		width: 100%;
-		z-index: 100;
-		height: 230px;
+			display: none;
+			background-color: rgb(220,220,220);
+			position: fixed;
+			top: 65px;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			z-index: 100;
+			height: 230px;
 
-	}
-	
-	.logo{
-		width: 80%;
-		display: block;
-		margin-top: 20px;
-	}
+		}
+		
+		.logo{
+			width: 80%;
+			display: block;
+			margin-top: 20px;
+		}
   .heading h2 {
     font-size: 20px;
   }
@@ -680,8 +700,11 @@ display: block;
 	}
 .sp-about-title{
 		color: #696969;
-	    text-align: center; 
-}	
+	    text-align: center;
+	display: block;
+	padding-top:20px;
+	padding-bottom: 20px;
+} 	
 input, textarea{
   width: 300px;
   margin: 10px 0 30px 0;
@@ -718,7 +741,7 @@ input, textarea{
   font-size: 25px;
 		position: fixed;
 		left:92%;
-display: block;
+ display: block;
 }
 
   .top-wrapper .btn {
@@ -758,8 +781,8 @@ display: block;
 
 
 .about {
-  	display: none;
-}
+ 	 	display: none;
+ }
 
 .sp-about-title{
 		color: #696969;
