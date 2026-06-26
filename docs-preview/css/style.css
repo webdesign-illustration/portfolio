@@ -266,6 +266,7 @@ header {
   transform: translateY(8px);
   pointer-events: none;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  text-align: left;
 }
 
 .text-contents strong {
@@ -273,6 +274,7 @@ header {
   font-weight: bold;
   display: block;
   margin-bottom: 8px;
+  text-align: left;
 }
 
 /* show overlay on hover without affecting surrounding elements */
@@ -597,6 +599,7 @@ display: block;
   color: #696969;
 	padding-left: 10%;
 	padding-right: 10%;
+	text-align: left;
 }
 
 .text-contents2 strong {
@@ -604,6 +607,7 @@ display: block;
   font-weight: bold;
   display: block;
   margin-bottom: 8px;
+  text-align: left;
 }
 	
 .about {
