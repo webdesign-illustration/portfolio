@@ -32,10 +32,28 @@
   margin-bottom: 10px;
 }
 
-.before-after img,
+.before-after {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.before-after img {
+  width: calc(50% - 10px);
+  border-radius: 6px;
+}
+
+.sub-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
 .sub-images img {
-  width: 48%;
-  margin: 1%;
+  width: calc(33.333% - 14px);
   border-radius: 6px;
 }
 
@@ -48,5 +66,13 @@
 @media all and (max-width: 1000px) {
   .menu-icon {
     display: block !important;
+  }
+  
+  .before-after img {
+    width: 100%;
+  }
+  
+  .sub-images img {
+    width: 100%;
   }
 }
