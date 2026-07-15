@@ -233,9 +233,8 @@ header {
 
 .lesson {
   float: left;
-  width: 50%;
-  padding: 0 20px;   /* ← 左右に余白を入れる */
-  margin-bottom: 50px;
+  width: calc(50% - 40px); /* ← 横幅を少し小さくする */
+  margin: 0 20px 50px;     /* ← 左右に20pxの余白を追加 */
   position: relative;
 }
 
@@ -248,7 +247,7 @@ header {
 	width: 100%;
 	aspect-ratio: 16 / 9;   /* ← 長方形にする */
   object-fit: cover;
-	
+	border-radius: 4px;
 	display: block;
 }
 
