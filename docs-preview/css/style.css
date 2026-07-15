@@ -233,7 +233,7 @@ header {
 
 .lesson {
   float: left;
-  width: 25%;
+  width: 50%;
   position: relative; /* make the lesson a positioning context so overlays don't change document flow */
 }
 
@@ -243,6 +243,8 @@ header {
 }
 .lesson-icon img{
 	width: 100%;
+	aspect-ratio: 16 / 9;   /* ← 長方形にする */
+  object-fit: cover;
 	display: block;
 }
 
