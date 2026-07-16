@@ -191,11 +191,13 @@ header {
 	top:50px;
 }
 
-.box-img{
-	margin: 0 auto;
-	text-align: center;
-	width: 100%;
-	position: relative;
+.box-img {
+  width: 100%;
+  max-width: 1000px;   /* ← 下の画像と同じ最大幅にする（必要なら調整） */
+  margin: 0 auto;      /* ← センター配置 */
+  padding-left: 5%;    /* ← about と lesson-wrapper と同じ左右余白 */
+  padding-right: 5%;
+  text-align: center;
 }
 
 .active {
