@@ -50,26 +50,29 @@ setTimeout(() => {
 
   const fragmentCount = 80;
 
-  for (let i = 0; i < fragmentCount; i++) {
-    const fragment = document.createElement('div');
-    fragment.classList.add('fragment');
+ const fragmentCount = 80;
+const fragments = []; // ← 追加：fragment を全部ここに入れる
 
-    fragment.style.left = Math.random() * 100 + '%';
-    fragment.style.top = Math.random() * 100 + '%';
+for (let i = 0; i < fragmentCount; i++) {
+  const fragment = document.createElement('div');
+  fragment.classList.add('fragment');
 
-    fragmentsContainer.appendChild(fragment);
+  fragment.style.left = Math.random() * 100 + '%';
+  fragment.style.top = Math.random() * 100 + '%';
 
-    setTimeout(() => {
-      fragment.style.transition = 'all 2s ease-out';
-      fragment.style.left = '50%';
-      fragment.style.top = '50%';
-      fragment.style.opacity = '0';
-    }, 100);
-  }
+  // ここで transition を設定（重要）
+  fragment.style.transition = 'all 2s ease-out';
 
-  // Information Design の文字をフェードイン
-  setTimeout(() => {
-    finalText.style.opacity = 1;
-  }, 2500);
+  fragmentsContainer.appendChild(fragment);
 
-}, 2500); // KSDesign の演出が終わるタイミング
+  fragments.push(fragment); // ← 追加：配列に入れる
+}
+
+// まとめて消す（最後に残らない）
+setTimeout(() => {
+  fragments.forEach(fragment => {
+    fragment.style.left = '50%';
+    fragment.style.top = '50%';
+    fragment.style.opacity = '0';
+  });
+}, 100); // KSDesign の演出後に動かすならここを 2500 にする
