@@ -132,14 +132,14 @@ header {
 }
 
 .fragment {
-  position: absolute;
-  width: 6px;
-  height: 6px;
-  background: #d0d0d0;
-  border-radius: 2px;
-  opacity: 0.8;
-  transform: translate(-50%, -50%);
+  position: absolute !important;
+  width: 8px !important;
+  height: 8px !important;
+  background: #00f !important;
+  opacity: 1 !important;
+  z-index: 9999 !important;
 }
+
 
 .final-text {
   font-size: 48px;
