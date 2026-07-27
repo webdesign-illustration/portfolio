@@ -142,11 +142,14 @@ header {
 }
 
 .final-text {
-  font-size: 48px;
+  font-size: 80px;
+  letter-spacing: 0.05em;
   color: #696969;
   opacity: 0;
-  transition: opacity 1.5s ease;
+  transform: scale(0.98);
+  transition: opacity 2s ease, transform 2s ease;
 }
+
 
 
 .lesson-wrapper {
