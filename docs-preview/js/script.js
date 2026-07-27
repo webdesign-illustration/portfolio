@@ -49,30 +49,32 @@ setTimeout(() => {
   const finalText = document.querySelector('.final-text');
 
   const fragmentCount = 80;
+  const fragments = [];
 
- const fragmentCount = 80;
-const fragments = []; // ← 追加：fragment を全部ここに入れる
+  // fragment を生成する部分（ここが KSDesign の演出後に動く）
+  for (let i = 0; i < fragmentCount; i++) {
+    const fragment = document.createElement('div');
+    fragment.classList.add('fragment');
 
-for (let i = 0; i < fragmentCount; i++) {
-  const fragment = document.createElement('div');
-  fragment.classList.add('fragment');
+    fragment.style.left = Math.random() * 100 + '%';
+    fragment.style.top = Math.random() * 100 + '%';
 
-  fragment.style.left = Math.random() * 100 + '%';
-  fragment.style.top = Math.random() * 100 + '%';
+    fragmentsContainer.appendChild(fragment);
+    fragments.push(fragment);
+  }
 
-  // ここで transition を設定（重要）
-  fragment.style.transition = 'all 2s ease-out';
+  // fragment を中央に集めて消す
+  setTimeout(() => {
+    fragments.forEach(fragment => {
+      fragment.style.left = '50%';
+      fragment.style.top = '50%';
+      fragment.style.opacity = '0';
+    });
+  }, 1000);
 
-  fragmentsContainer.appendChild(fragment);
+  // 最後に文字をフェードイン
+  setTimeout(() => {
+    finalText.style.opacity = 1;
+  }, 2500);
 
-  fragments.push(fragment); // ← 追加：配列に入れる
-}
-
-// まとめて消す（最後に残らない）
-setTimeout(() => {
-  fragments.forEach(fragment => {
-    fragment.style.left = '50%';
-    fragment.style.top = '50%';
-    fragment.style.opacity = '0';
-  });
-}, 100); // KSDesign の演出後に動かすならここを 2500 にする
+}, 2500); // KSDesign の演出が終わるタイミング
