@@ -50,11 +50,11 @@ setTimeout(() => {
   const fragmentCount = 80;
   const fragments = [];
 
+  // fragment を生成
   for (let i = 0; i < fragmentCount; i++) {
     const fragment = document.createElement('div');
     fragment.classList.add('fragment');
 
-    // 初期位置（ランダム）
     fragment.style.left = Math.random() * 100 + '%';
     fragment.style.top = Math.random() * 100 + '%';
 
@@ -62,11 +62,10 @@ setTimeout(() => {
     fragments.push(fragment);
   }
 
-  // 自然な動き：個体差 + 軌道のゆらぎ + 時間差
+  // fragment を中央に集めて消す
   fragments.forEach((fragment, index) => {
-
-    const delay = Math.random() * 800; // 0〜0.8秒のランダム遅延
-    const offsetX = (Math.random() - 0.5) * 20; // 中央から±10pxズレ
+    const delay = Math.random() * 800; // 自然な遅延
+    const offsetX = (Math.random() - 0.5) * 20;
     const offsetY = (Math.random() - 0.5) * 20;
 
     setTimeout(() => {
@@ -76,9 +75,10 @@ setTimeout(() => {
     }, delay);
   });
 
- // 文字フェードイン
-setTimeout(() => {
-  finalText.style.opacity = 1;
-  finalText.style.transform = "scale(1)";
-}, 2500);
+  // final-text をフェードイン
+  setTimeout(() => {
+    finalText.style.opacity = 1;
+    finalText.style.transform = "scale(1)";
+  }, 3000);
 
+}, 2500);
