@@ -76,9 +76,9 @@ setTimeout(() => {
     }, delay);
   });
 
-  // 文字フェードイン
-  setTimeout(() => {
-    finalText.style.opacity = 1;
-  }, 3000);
-
+ // 文字フェードイン
+setTimeout(() => {
+  finalText.style.opacity = 1;
+  finalText.style.transform = "scale(1)";
 }, 2500);
+
