@@ -132,14 +132,14 @@ header {
 }
 
 .fragment {
-  position: absolute !important;
-  width: 8px !important;
-  height: 8px !important;
+  position: absolute;
+  width: 8px;
+  height: 8px;
   background: #696969;
-  opacity: 1 !important;
-  z-index: 9999 !important;
+  opacity: 1;
+  transition: all 2s ease-out; /* ← これが重要 */
+  z-index: 9999;
 }
-
 
 .final-text {
   font-size: 48px;
