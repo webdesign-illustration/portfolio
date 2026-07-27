@@ -44,18 +44,17 @@ $(function() {
 // fragment のアニメーションを KSDesign の演出後に開始
 setTimeout(() => {
 
-  const container = document.querySelector('.animation-container');
   const fragmentsContainer = document.getElementById('fragments');
   const finalText = document.querySelector('.final-text');
 
   const fragmentCount = 80;
   const fragments = [];
 
-  // fragment を生成する部分（ここが KSDesign の演出後に動く）
   for (let i = 0; i < fragmentCount; i++) {
     const fragment = document.createElement('div');
     fragment.classList.add('fragment');
 
+    // 初期位置（ランダム）
     fragment.style.left = Math.random() * 100 + '%';
     fragment.style.top = Math.random() * 100 + '%';
 
@@ -63,18 +62,23 @@ setTimeout(() => {
     fragments.push(fragment);
   }
 
-  // fragment を中央に集めて消す
-  setTimeout(() => {
-    fragments.forEach(fragment => {
-      fragment.style.left = '50%';
-      fragment.style.top = '50%';
-      fragment.style.opacity = '0';
-    });
-  }, 1000);
+  // 自然な動き：個体差 + 軌道のゆらぎ + 時間差
+  fragments.forEach((fragment, index) => {
 
-  // 最後に文字をフェードイン
+    const delay = Math.random() * 800; // 0〜0.8秒のランダム遅延
+    const offsetX = (Math.random() - 0.5) * 20; // 中央から±10pxズレ
+    const offsetY = (Math.random() - 0.5) * 20;
+
+    setTimeout(() => {
+      fragment.style.left = `calc(50% + ${offsetX}px)`;
+      fragment.style.top = `calc(50% + ${offsetY}px)`;
+      fragment.style.opacity = '0';
+    }, delay);
+  });
+
+  // 文字フェードイン
   setTimeout(() => {
     finalText.style.opacity = 1;
-  }, 2500);
+  }, 3000);
 
-}, 2500); // KSDesign の演出が終わるタイミング
+}, 2500);
