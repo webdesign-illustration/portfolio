@@ -138,6 +138,7 @@ header {
   background: #696969;
   opacity: 1 !important;
   z-index: 9999 !important;
+  transition: all 2s ease-out;
 }
 
 
