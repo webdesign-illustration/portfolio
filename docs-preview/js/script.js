@@ -104,4 +104,4 @@ for (let i = 0; i < fragmentCount; i++) {
 setTimeout(() => {
   finalText.style.opacity = 1;
 }, 2500);
-});
+
