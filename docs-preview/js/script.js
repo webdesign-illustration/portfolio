@@ -75,3 +75,32 @@ $(window).on('load scroll', function(){
 	}
 });
 
+const container = document.querySelector('.animation-container');
+const fragmentsContainer = document.getElementById('fragments');
+const finalText = document.querySelector('.final-text');
+
+const fragmentCount = 80; // 断片の数
+
+for (let i = 0; i < fragmentCount; i++) {
+  const fragment = document.createElement('div');
+  fragment.classList.add('fragment');
+
+  // ランダムな初期位置
+  fragment.style.left = Math.random() * 100 + '%';
+  fragment.style.top = Math.random() * 100 + '%';
+
+  fragmentsContainer.appendChild(fragment);
+
+  // アニメーション開始
+  setTimeout(() => {
+    fragment.style.transition = 'all 2s ease-out';
+    fragment.style.left = '50%';
+    fragment.style.top = '50%';
+    fragment.style.opacity = '0';
+  }, 100);
+}
+
+// 最後に文字をフェードイン
+setTimeout(() => {
+  finalText.style.opacity = 1;
+}, 2500);
