@@ -124,7 +124,7 @@ header {
 .animation-container {
   position: relative;
   width: 100%;
-  height: 800px;
+  height: 700px;
   background: #ffffff;
   display: flex;
   justify-content: center;
