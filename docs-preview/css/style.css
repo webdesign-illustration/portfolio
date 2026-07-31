@@ -237,6 +237,7 @@ header {
 
 .lesson-wrapper-sp{
 	display: none;
+	background-color: #f5f5f5;
 }
 .text-contents {
   /* Change from inline block to an absolutely positioned overlay so revealing text doesn't change layout */
@@ -576,6 +577,7 @@ display: block;
 	
  .lesson-wrapper-sp {
 	display: block;
+	background-color: #f5f5f5;
   }
 
 	.lesson-icon{
