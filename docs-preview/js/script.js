@@ -7,7 +7,7 @@ $(function() {
     	$('#menu-show').fadeOut();
    });
 	
- $('.lesson').hover(
+	 $('.lesson').hover(
     function() {
       $(this).find('.text-contents').addClass('text-active');
     },
@@ -15,9 +15,9 @@ $(function() {
       $(this).find('.text-contents').removeClass('text-active');
     }
   );
- });
+});
 
-	
+
  $(window).on('scroll load', function(){        /* ページロード時、またはスクロールされた時*/
   var scroll = $(this).scrollTop();            /* 現在のスクロール量を測定 */
   var windowHeight = $(window).height();       /* ウィンドウの高さを測定 */
@@ -32,55 +32,75 @@ $(function() {
 
 $(document).ready(function () {
 
-  // KSDesign の演出
-  setTimeout(function(){
-      $('.start p').fadeIn(1600);
-  },500);
+  // ここで「初回訪問のみ」の判定を行う
+  // localStorage にフラグを保存する（永続的）。タブごとにしたければ sessionStorage に変更してください。
+  var visited = localStorage.getItem('ksdesignVisited');
 
-  setTimeout(function(){
-      $('.start').fadeOut(500);
-  },2500);
+  if (!visited) {
+    // 初回訪問時のみ表示する演出
 
-  // fragment のアニメーションを KSDesign の演出後に開始
-  setTimeout(() => {
+    // KSDesign の演出
+    setTimeout(function(){
+        $('.start p').fadeIn(1600);
+    },500);
 
-    const fragmentsContainer = document.getElementById('fragments');
-    const finalText = document.querySelector('.final-text');
+    setTimeout(function(){
+        $('.start').fadeOut(500);
+    },2500);
 
-    const fragmentCount = 80;
-    const fragments = [];
-
-    // fragment を生成
-    for (let i = 0; i < fragmentCount; i++) {
-      const fragment = document.createElement('div');
-      fragment.classList.add('fragment');
-
-      fragment.style.left = Math.random() * 100 + '%';
-      fragment.style.top = Math.random() * 100 + '%';
-
-      fragmentsContainer.appendChild(fragment);
-      fragments.push(fragment);
-    }
-
-    // fragment を中央に集めて消す
-    fragments.forEach((fragment) => {
-      const delay = Math.random() * 800;
-      const offsetX = (Math.random() - 0.5) * 20;
-      const offsetY = (Math.random() - 0.5) * 20;
-
-      setTimeout(() => {
-        fragment.style.left = `calc(50% + ${offsetX}px)`;
-        fragment.style.top = `calc(50% + ${offsetY}px)`;
-        fragment.style.opacity = '0';
-      }, delay);
-    });
-
-    // final-text をフェードイン
+    // fragment のアニメーションを KSDesign の演出後に開始
     setTimeout(() => {
+
+      const fragmentsContainer = document.getElementById('fragments');
+      const finalText = document.querySelector('.final-text');
+
+      const fragmentCount = 80;
+      const fragments = [];
+
+      // fragment を生成
+      for (let i = 0; i < fragmentCount; i++) {
+        const fragment = document.createElement('div');
+        fragment.classList.add('fragment');
+
+        fragment.style.left = Math.random() * 100 + '%';
+        fragment.style.top = Math.random() * 100 + '%';
+
+        fragmentsContainer.appendChild(fragment);
+        fragments.push(fragment);
+      }
+
+      // fragment を中央に集めて消す
+      fragments.forEach((fragment) => {
+        const delay = Math.random() * 800;
+        const offsetX = (Math.random() - 0.5) * 20;
+        const offsetY = (Math.random() - 0.5) * 20;
+
+        setTimeout(() => {
+          fragment.style.left = `calc(50% + ${offsetX}px)`;
+          fragment.style.top = `calc(50% + ${offsetY}px)`;
+          fragment.style.opacity = '0';
+        }, delay);
+      });
+
+      // final-text をフェードイン
+      setTimeout(() => {
+        finalText.style.opacity = 1;
+        finalText.style.transform = "scale(1)";
+      }, 3000);
+
+    }, 2500);
+
+    // 初回表示後にフラグを立てる
+    localStorage.setItem('ksdesignVisited', 'true');
+
+  } else {
+    // 既訪問の場合はアニメーションをスキップして、初期状態を通常表示にする
+    $('.start').hide();
+    var finalText = document.querySelector('.final-text');
+    if (finalText) {
       finalText.style.opacity = 1;
       finalText.style.transform = "scale(1)";
-    }, 3000);
-
-  }, 2500);
+    }
+  }
 
 });
